@@ -1,1 +1,1 @@
-Hey there! What's up? 😊
+Hey there! How can I help you today? 😊
