@@ -1,23 +1,18 @@
-System design is the process of defining the architecture, components, modules, interfaces, and data for a system to satisfy specified requirements. It's about figuring out *how* to build something robust, scalable, and reliable.
+System design is the process of defining the architecture, components, modules, interfaces, and data for a system to satisfy specified requirements. It's about solving complex engineering problems at scale.
 
 Here are 5 short topics about system design:
 
-1.  **Scalability & Performance:**
-    *   **What it is:** Designing systems to handle increasing load (more users, more data) and maintain fast response times.
-    *   **Key aspects:** Horizontal vs. vertical scaling, load balancing, caching (CDN, in-memory), sharding databases, and optimizing query performance.
+1.  **Scalability:**
+    Ensuring a system can handle increasing loads (users, data, requests) efficiently. This involves designing to grow, often through **horizontal scaling** (adding more machines) rather than just **vertical scaling** (upgrading existing machines). Techniques like sharding, replication, and load balancing are crucial for managing growth.
 
-2.  **Reliability & Availability:**
-    *   **What it is:** Ensuring the system remains operational and can recover from failures gracefully, minimizing downtime.
-    *   **Key aspects:** Redundancy (multiple instances), fault tolerance, failover mechanisms, disaster recovery strategies, and error handling.
+2.  **Availability & Reliability:**
+    **Availability** means the system is operational and accessible when needed, minimizing downtime. **Reliability** means it performs its intended functions correctly and consistently, even in the face of failures. Achieved through redundancy (duplicate components), fault tolerance (designing to withstand failures), and disaster recovery strategies.
 
-3.  **Data Storage & Management:**
-    *   **What it is:** Deciding how data is stored, organized, accessed, and maintained within the system.
-    *   **Key aspects:** Choosing between SQL (relational) and NoSQL (non-relational) databases, data replication, sharding, indexing, and ensuring data consistency.
+3.  **Performance & Latency:**
+    **Performance** refers to how quickly and efficiently a system processes requests (throughput) and responds to users (latency). Optimizing performance often involves **caching** (storing frequently accessed data closer to the user or in faster memory), efficient data structures, asynchronous processing, and minimizing network hops.
 
-4.  **Inter-Service Communication & APIs:**
-    *   **What it is:** Defining how different parts (services) of a distributed system communicate with each other and how external clients interact with the system.
-    *   **Key aspects:** RESTful APIs, gRPC, message queues (e.g., Kafka, RabbitMQ) for asynchronous communication, and service discovery.
+4.  **Data Storage & Management:**
+    Deals with how data is stored, retrieved, and managed across the system. This includes choosing appropriate databases (relational SQL vs. NoSQL), designing schemas, ensuring data consistency (e.g., ACID vs. BASE), partitioning data for scalability, and handling data replication, backups, and eventual consistency in distributed systems.
 
-5.  **Trade-offs & Requirements:**
-    *   **What it is:** Understanding that every design choice involves compromises and prioritizing non-functional requirements (security, latency, consistency, availability, cost) based on business needs.
-    *   **Key aspects:** The CAP theorem (Consistency, Availability, Partition Tolerance), evaluating different architectural patterns (monolith vs. microservices), and making informed decisions based on the specific problem being solved.
+5.  **Trade-offs & Constraints:**
+    System design is fundamentally about making informed decisions by balancing competing factors. There's rarely a "perfect" solution; instead, designers weigh **trade-offs** between aspects like cost, performance, complexity, development time, operational overhead, and security, always within the specified **constraints** and requirements.
